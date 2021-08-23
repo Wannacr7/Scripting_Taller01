@@ -257,6 +257,12 @@ namespace Scripting_Taller01
 
             return dictionaryreturn;
         }
+
+        /// <summary>
+        /// Devuelve un arreglo que acumula los elementos del mismo valos del diccionario
+        /// </summary>
+        /// <param name="_type"></param>
+        /// <returns></returns>
         public int[] TypeValueDictionary(Dictionary<int, String> _type)
         {
             int[] typeDictionary = new int[5];
@@ -279,6 +285,15 @@ namespace Scripting_Taller01
             typeDictionary[4] = prime;
 
             return typeDictionary;
+        }
+
+        public Dictionary<int,string> OrderDic(Dictionary<int, string> _dic)
+        {
+            var sortedDict = from entry in _dic orderby entry.Key descending select entry;
+
+            var returndic = sortedDict.ToDictionary(x => x.Key, x => x.Value);
+
+            return returndic;
         }
 
         

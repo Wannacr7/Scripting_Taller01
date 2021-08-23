@@ -21,6 +21,7 @@ namespace Scripting_Taller01
             List<int> thirdPoint = new List<int>();
             int[] testup;
             Dictionary<int, string> thirdDictionary;
+            Dictionary<int, string> orderDictionary;
             int[] typeDictionary;
 
             Tool testing = new Tool(teststack);
@@ -71,6 +72,16 @@ namespace Scripting_Taller01
             Console.WriteLine("tipodiccionario");
             Console.WriteLine("multiplos de dos, tres, cinco, siete, primos");
             for (int i = 0; i < typeDictionary.Length; i++) Console.WriteLine(typeDictionary[i]);
+            Console.WriteLine("Orden ascendente");
+            orderDictionary = empty.OrderDic(thirdDictionary);
+            foreach (KeyValuePair<int, string> kvp in orderDictionary)
+            {
+                //textBox3.Text += ("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
+
+
+
 
 
 
